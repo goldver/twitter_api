@@ -1,0 +1,16 @@
+*.swp
+/.idea/
+
+# Eclipse dev files
+.buildpath
+.project
+.pydevproject
+
+.ipynb_checkpoints/
+*.ipynb
+*.pyc
+.coverage
+.DS_Store
+*.lock
+.vscode
+*~

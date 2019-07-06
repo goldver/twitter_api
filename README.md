@@ -1,26 +1,36 @@
 # twitter_api
-Scripts for Twitter API
+Scripts for Twitter API. 
+Python script that allowing to monitor and analyze real-time trends in Twitter and visually display live status of 10 hottest trends
 
-1. Python script that allowing to monitor and analyze real-time trends in Twitter and visually display live status of 10 hottest trends
+Prerequisites
+===============================
 
 Synopsis:
 - Create a Developer Twitter account: https://developer.twitter.com/en/apps
 - Retrieve 4 bellow credentials
 
-|  Credential:              | Description:                           | 
-|:--------------------------|:---------------------------------------|
-| TWITTER_APP_KEY           | TWITTER_APP_KEY                        |               
-| TWITTER_APP_SECRET        | TWITTER_APP_SECRET                     |               
-| TWITTER_KEY               | TWITTER_KEY                            |               
-| TWITTER_SECRET            | TWITTER_SECRET                         |            
+|  Credential:              | 
+|:--------------------------|
+| TWITTER_APP_KEY           |              
+| TWITTER_APP_SECRET        |             
+| TWITTER_KEY               |            
+| TWITTER_SECRET            |
 
-execute python script, for example:
+- Install requirements: pip install -r requirements.txt
 
-python3 twitter_api.com
+Usage
+===============================
+
+|  Credential: | Description:                              | Example:        |
+|:-------------|:------------------------------------------|:----------------|
+| PATTERN_1    | Please specify word you looking           | trump           |           
+| PATTERN_2    | Please specify another word you looking   | donald trump    |              
+
+execute python script, for example: 
+python3 twitter_api.com trump "donald trump"
 
 TO DO
 -----
-
 - Memory care
 - Graph presentation
 
