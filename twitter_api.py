@@ -1,12 +1,11 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-
 __version__ = '1.0.0'
 
 import argparse
 import collections
 import datetime
 import json
+import os
+import sys
 
 import tweepy
 
@@ -40,9 +39,17 @@ start_time = datetime.datetime.now()
 
 class MyStreamListener(tweepy.StreamListener):
     def on_status(self, status):
+        """
+        :param status:
+        :return:
+        """
         print("status", status)
 
     def on_data(self, tweet):
+        """
+        :param tweet:
+        :return:
+        """
         global start_time
         tweet_dict = json.loads(tweet)
         if 'entities' in tweet_dict:
@@ -56,19 +63,19 @@ class MyStreamListener(tweepy.StreamListener):
             start_time = datetime.datetime.now()
             temp = hashtags_counter.most_common(100)
             hashtags_counter.clear()
+            # reduce time
             for ht in temp:
                 hashtags_counter[ht[0]] = ht[1] * 0.9
 
         logger.info(datetime.datetime.now() - start_time)
 
-        # print(tweet_dict.keys())
-        # if 'created_at' in tweet_dict:
-        # 	print(tweet_dict['created_at'])
-        # 	# Sat Jul 06 04:40:32 +0000 2019
-
         return True
 
     def on_error(self, status_code):
+        """
+        :param status_code:
+        :return:
+        """
         print("status_code", status_code)
 
 
