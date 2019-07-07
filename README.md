@@ -27,7 +27,7 @@ Usage
 | PATTERN_2    | Please specify another word you looking   | donald trump    |              
 
 execute python script, for example: 
-python3 twitter_api.com trump "donald trump"
+python3 twitter_api.com trump "donald trump" | python3 twitter_api_graph.com trump "donald trump"
 
 TO DO
 -----
